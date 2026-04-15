@@ -1,0 +1,59 @@
+---
+export const prerender = true;
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Page Not Found | D-Essence Wellness";
+---
+
+<BaseLayout title={title} noindex={true}>
+  <section class="min-h-[80vh] w-full flex flex-col items-center justify-center text-center px-6 py-24 bg-neutral-950 relative overflow-hidden">
+
+    <!-- subtle vignette gradient -->
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-neutral-900/40 via-transparent to-neutral-900/70"></div>
+
+    <!-- logo -->
+    <img 
+      src="/LOGO_W.webp" 
+      alt="D-Essence Wellness Logo" 
+      class="w-40 mb-10 opacity-90 animate-fade"
+      loading="lazy"
+    />
+
+    <!-- main text -->
+    <h1 class="text-4xl md:text-5xl font-semibold text-white mb-4 tracking-tight animate-fade-up">
+      Page Not Found
+    </h1>
+
+    <p class="text-neutral-400 text-lg max-w-md mx-auto mb-10 leading-relaxed animate-fade-up delay-100">
+      The page you’re looking for doesn’t exist or may have been moved.
+    </p>
+
+    <!-- button -->
+    <a 
+      href="/" 
+      class="inline-flex items-center px-6 py-3 rounded-full border border-white/20 text-white/90 hover:text-white hover:border-white/40 transition-all duration-300 text-sm md:text-base animate-fade-up delay-200"
+    >
+      Go Back Home
+    </a>
+  </section>
+</BaseLayout>
+
+<style>
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade {
+    animation: fade 0.8s ease-out forwards;
+  }
+  .animate-fade-up {
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards;
+  }
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+</style>

@@ -1,0 +1,230 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Facial Waxing | D-Essence Wellness',
+  description:
+    'Precise facial waxing for brows, upper lip, chin, and sideburns using gentle, high-quality wax. Smooth, clean, and defined results with minimal irritation.',
+  canonical: 'https://www.d-essencewellness.com/services/facial-waxing/',
+  type: 'website',
+
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Facial Waxing',
+      serviceType: 'Facial Hair Removal',
+      description:
+        'Professional facial waxing for eyebrows, upper lip, chin, and sideburns using gentle wax to achieve smooth and defined results.',
+      areaServed: 'Hudson Valley, NY',
+      url: 'https://www.d-essencewellness.com/services/facial-waxing/',
+
+      provider: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        telephone: '+1-716-303-8963',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
+        }
+      }
+    },
+
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Facial Waxing',
+          item: 'https://www.d-essencewellness.com/services/facial-waxing/'
+        }
+      ]
+    }
+  ]
+};
+---
+
+
+<BaseLayout seo={seo}>
+  <!-- Preload shared service image (replace later as needed) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/Facial_Waxing.webp"
+    imagesrcset="/Facial_Waxing.webp 1x, /Facial_Waxing.webp 2x"
+    imagesizes="(min-width: 1024px) 480px, 64vw"
+  />
+
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-12">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
+          <span>Hair Removal</span>
+          <span class="opacity-60">•</span>
+          <span>New Windsor, NY</span>
+        </div>
+
+        <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Facial Waxing</h1>
+        <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN (2 cols) ===== -->
+  <section class="relative bg-white text-neutral-900">
+    <div class="container py-14 sm:py-[4.5rem]">
+      <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+        <!-- Image -->
+        <figure class="relative">
+          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
+          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
+
+          <picture>
+            <!-- <source srcset="/Facial_Waxing.avif" type="image/avif" /> -->
+            <source srcset="/Facial_Waxing.webp" type="image/webp" />
+            <img
+              id="ba-open"
+              src="/Facial_Waxing.webp"
+              alt="Facial waxing service at D-Essence Wellness"
+              fetchpriority="high"
+              decoding="async"
+              sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
+              class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
+              width="960"
+              height="1280"
+              onerror="this.onerror=null; this.src='/placeholder-service.jpg';"
+            />
+          </picture>
+        </figure>
+
+        <!-- Copy + CTA -->
+        <div>
+          <p class="text-neutral-700/90">
+            Maintain smooth, polished skin with precise waxing for small facial areas. Ideal for eyebrows, upper lip,
+            chin, and sideburns, this quick treatment removes unwanted hair from the root for a clean, defined look.
+          </p>
+          <p class="mt-3 text-neutral-700/90">
+            We use gentle, high-quality wax to minimize irritation and leave your skin soft and refreshed.
+          </p>
+
+          <div class="mt-8">
+            <a
+              href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+              aria-label="Book a Facial Waxing appointment"
+            >
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox / Zoom -->
+    <div
+      id="ba-lightbox"
+      class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-150"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lb-title"
+      aria-describedby="lb-desc"
+    >
+      <div class="absolute inset-0 bg-black/80"></div>
+      <div class="relative h-full w-full flex items-center justify-center p-4">
+        <h2 id="lb-title" class="sr-only">Zoomed image</h2>
+        <p id="lb-desc" class="sr-only">Press Escape or the close button to exit.</p>
+
+        <picture>
+          <!-- <source srcset="/Facial_Waxing.avif" type="image/avif" /> -->
+          <source srcset="/Facial_Waxing.webp" type="image/webp" />
+          <img
+            src="/Facial_Waxing.webp"
+            alt="Zoomed illustrative image for Facial Waxing"
+            class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
+          />
+        </picture>
+
+        <button
+          id="ba-close"
+          class="absolute top-4 right-4 inline-flex items-center justify-center rounded-full bg-white/90 text-neutral-900 h-10 w-10 hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="Close image"
+          title="Close"
+        >
+          ✕
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox script -->
+  <script is:inline>
+    (() => {
+      const openEl = document.getElementById('ba-open');
+      const lightbox = document.getElementById('ba-lightbox');
+      const closeEl = document.getElementById('ba-close');
+
+      if (!openEl || !lightbox || !closeEl) return;
+
+      let lastFocused = null;
+
+      function show() {
+        lastFocused = document.activeElement;
+        lightbox.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          lightbox.classList.remove('opacity-0');
+          lightbox.classList.add('opacity-100');
+        });
+
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', onKey);
+        setTimeout(() => closeEl.focus(), 0);
+      }
+
+      function hide() {
+        lightbox.classList.add('opacity-0');
+        lightbox.classList.remove('opacity-100');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+        }, 150);
+
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', onKey);
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus();
+        }
+      }
+
+      function onKey(e) {
+        if (e.key === 'Escape') hide();
+        if (e.key === 'Tab') {
+          e.preventDefault();
+          closeEl.focus();
+        }
+      }
+
+      openEl.addEventListener('click', show);
+      closeEl.addEventListener('click', hide);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) hide();
+      });
+    })();
+  </script>
+</BaseLayout>

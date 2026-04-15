@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Therapeutic Massage | D-Essence Wellness',
+  description:
+    'Therapeutic massage treatments combining Swedish, deep tissue, maternity, Shiatsu, and Reiki techniques for relaxation and holistic healing in New Windsor, NY.',
+  canonical: 'https://www.d-essencewellness.com/services/therapeutic-massage/',
+  type: 'website',
+
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Therapeutic Massage',
+      serviceType: 'Massage Therapy',
+      description:
+        'Customized therapeutic massage sessions designed to restore balance, relieve tension, and promote holistic well-being through Swedish, deep tissue, maternity, Shiatsu, and Reiki techniques.',
+      areaServed: 'Hudson Valley, NY',
+
+      image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+      priceRange: '$$',
+
+      provider: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'D-Essence Wellness',
+        url: 'https://www.d-essencewellness.com',
+        telephone: '+1-716-303-8963',
+        image: 'https://www.d-essencewellness.com/LOGO_W.webp',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
+        }
+      },
+
+      url: 'https://www.d-essencewellness.com/services/therapeutic-massage/'
+    },
+
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Services',
+          item: 'https://www.d-essencewellness.com/services/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Therapeutic Massage',
+          item: 'https://www.d-essencewellness.com/services/therapeutic-massage/'
+        }
+      ]
+    }
+  ]
+};
+---
+
+
+<BaseLayout seo={seo}>
+  <!-- Preload shared image -->
+  <link
+    rel="preload"
+    as="image"
+    href="/massage.webp"
+    imagesrcset="/massage.webp 1x, /massage.webp 2x"
+    imagesizes="(min-width: 1024px) 480px, 64vw"
+  />
+
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-12">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
+          <span>Wellness</span>
+          <span class="opacity-60">•</span>
+          <span>New Windsor, NY</span>
+        </div>
+
+        <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Therapeutic Massage</h1>
+        <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN (2 cols) ===== -->
+  <section class="relative bg-white text-neutral-900">
+    <div class="container py-14 sm:py-[4.5rem]">
+      <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+        <!-- Image -->
+        <figure class="relative">
+          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
+          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
+
+          <picture>
+            <source srcset="/massage.webp" type="image/webp" />
+            <img
+              id="ba-open"
+              src="/massage.webp"
+              alt="Therapeutic massage at D-Essence Wellness"
+              fetchpriority="high"
+              decoding="async"
+              sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
+              class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
+              width="960"
+              height="1280"
+              onerror="this.onerror=null; this.src='/placeholder-service.jpg';"
+            />
+          </picture>
+        </figure>
+
+        <!-- Copy + CTAs -->
+        <div>
+          <p class="text-neutral-700/90">
+            <strong>Massage Therapy by Sonja</strong>
+          </p>
+          <p class="mt-2 text-neutral-700/90">
+            At D-Essence Wellness, Sonja combines advanced bodywork, mindful technique, and holistic care to create deeply restorative massage experiences.
+            Each session is tailored to your body’s needs, encouraging balance, relaxation, and positive energy from the inside out.
+          </p>
+
+          <!-- Services List -->
+          <div class="mt-6 space-y-4 text-sm text-neutral-800">
+            <div>
+              <p class="font-medium text-neutral-900"><strong>Swedish Massage  |  45 | 90 min</strong></p>
+              <p>A classic and soothing technique that melts away tension and restores balance to the mind and body. Gentle, flowing strokes promote deep relaxation, ease muscle tightness, and improve circulation for an overall sense of calm and renewal.</p>
+            </div>
+
+            <div>
+              <p class="font-medium text-neutral-900"><strong>Deep Tissue Massage  |  45 | 90 min</strong></p>
+              <p>A therapeutic treatment focusing on deeper layers of muscle and connective tissue to relieve chronic tension and stiffness. Ideal for those seeking a firmer touch, improved mobility, and long-lasting muscle relief.</p>
+            </div>
+
+            <div>
+              <p class="font-medium text-neutral-900"><strong>Therapeutic Massage  |  45 | 90 min</strong></p>
+              <p>A customized combination of Swedish, Deep Tissue, and Eastern techniques tailored to your body’s specific needs. This restorative experience helps release tightness, restore circulation, and bring balance to both body and mind.</p>
+            </div>
+
+            <div>
+              <p class="font-medium text-neutral-900"><strong>Maternity Massage  |  45 | 90 min</strong></p>
+              <p>Designed to support expectant mothers, this nurturing treatment focuses on relieving tension in the lower back, hips, and legs while promoting relaxation and comfort throughout pregnancy. Gentle positioning and soothing techniques help ease fatigue and encourage overall well-being for both mother and baby.</p>
+            </div>
+
+            <div>
+              <p class="font-medium text-neutral-900"><strong>Shiatsu  |  45 | 90 min</strong></p>
+              <p>A traditional Japanese healing practice that uses rhythmic pressure along the body’s meridians to balance energy flow. Performed fully clothed and without oils, Shiatsu relieves stress, promotes relaxation, and harmonizes the body’s natural rhythm.</p>
+            </div>
+
+            <div>
+              <p class="font-medium text-neutral-900"><strong>Table Thai Yoga Massage  |  45 | 90 min</strong></p>
+              <p>A fusion of assisted stretching, acupressure, and gentle rocking performed on a treatment table. This “passive yoga” experience improves flexibility, eases muscle tightness, and leaves you feeling both relaxed and re-energized.</p>
+            </div>
+
+            <div>
+              <p class="font-medium text-neutral-900"><strong>Reiki with Chakra Balancing  |  45 | 90 min</strong></p>
+              <p>A calming energy-healing session that helps align the body’s chakras, release energetic blockages, and restore inner harmony. Gentle touch and intuitive guidance promote relaxation, clarity, and a sense of emotional balance.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex items-center gap-4">
+            <a
+              href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+              aria-label="Book a Therapeutic Massage appointment"
+            >
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox / Zoom -->
+    <div
+      id="ba-lightbox"
+      class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-150"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lb-title"
+      aria-describedby="lb-desc"
+    >
+      <div class="absolute inset-0 bg-black/80"></div>
+      <div class="relative h-full w-full flex items-center justify-center p-4">
+        <h2 id="lb-title" class="sr-only">Zoomed image</h2>
+        <p id="lb-desc" class="sr-only">Press Escape or the close button to exit.</p>
+
+        <picture>
+          <source srcset="/massage.webp" type="image/webp" />
+          <img
+            src="/massage.webp"
+            alt="Zoomed illustrative image for Therapeutic Massage"
+            class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
+          />
+        </picture>
+
+        <button
+          id="ba-close"
+          class="absolute top-4 right-4 inline-flex items-center justify-center rounded-full bg-white/90 text-neutral-900 h-10 w-10 hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="Close image"
+          title="Close"
+        >
+          ✕
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox script -->
+  <script is:inline>
+    (() => {
+      const openEl = document.getElementById('ba-open');
+      const lightbox = document.getElementById('ba-lightbox');
+      const closeEl = document.getElementById('ba-close');
+
+      if (!openEl || !lightbox || !closeEl) return;
+
+      let lastFocused = null;
+
+      function show() {
+        lastFocused = document.activeElement;
+        lightbox.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          lightbox.classList.remove('opacity-0');
+          lightbox.classList.add('opacity-100');
+        });
+
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', onKey);
+        setTimeout(() => closeEl.focus(), 0);
+      }
+
+      function hide() {
+        lightbox.classList.add('opacity-0');
+        lightbox.classList.remove('opacity-100');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+        }, 150);
+
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', onKey);
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus();
+        }
+      }
+
+      function onKey(e) {
+        if (e.key === 'Escape') hide();
+        if (e.key === 'Tab') {
+          e.preventDefault();
+          closeEl.focus();
+        }
+      }
+
+      openEl.addEventListener('click', show);
+      closeEl.addEventListener('click', hide);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) hide();
+      });
+    })();
+  </script>
+</BaseLayout>

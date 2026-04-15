@@ -1,0 +1,21 @@
+{
+  "name": "dessence-clean",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/vercel": "^9.0.1",
+    "astro": "^5.16.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
+    "@vercel/analytics": "^1.5.0"
+  }
+}
